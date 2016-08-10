@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="winterday.winterssptracker.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_CH_1"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CH 1 : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_1_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Status "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_1_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Time "
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_CH_1"
+        android:id="@+id/ll_CH_2"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CH 2 : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_2_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Status "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_2_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Time "
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_CH_2"
+        android:id="@+id/ll_CH_3"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CH 3 : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_3_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Status "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_3_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Time "
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_CH_3"
+        android:id="@+id/ll_CH_4"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CH 4 : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_4_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Status "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tw_CH_4_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Time "
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Count Down Timer"
+        android:layout_below="@+id/ll_CH_4" />
+
+</RelativeLayout>

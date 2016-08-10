@@ -10,7 +10,51 @@
     tools:context="winterday.winterssptracker.MainActivity">
 
     <TextView
+        android:id="@+id/tvChannel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="CH 1: -"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvChannel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvChannel1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="CH 2: -"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvChannel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvChannel2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="CH 3: -"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvChannel4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvChannel3"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="CH 4: -"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvChannel4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="Testing Button" />
+
 </RelativeLayout>

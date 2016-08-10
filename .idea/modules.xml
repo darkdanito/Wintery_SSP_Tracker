@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WinterSSPTracker.iml" filepath="$PROJECT_DIR$/WinterSSPTracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wintery_SSP_Tracker.iml" filepath="$PROJECT_DIR$/Wintery_SSP_Tracker.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
