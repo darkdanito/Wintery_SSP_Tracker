@@ -156,7 +156,7 @@ public class MainActivity extends Activity {
 
                 // Before Capture is: 10mins
                 channel_1_Status = "Before Capturing";
-                countDownTimer_CH_1 = new countdown_CH_1(600000, 1000);      // 10 Min
+                countDownTimer_CH_1 = new countdown_CH_1(660000, 1000);      // 11 Min
                 countDownTimer_CH_1.start();
 
             } else if (channel_1_Status == "Before Capturing") {
@@ -231,7 +231,7 @@ public class MainActivity extends Activity {
 
                 // Before Capture is: 10mins
                 channel_2_Status = "Before Capturing";
-                countDownTimer_CH_2 = new countdown_CH_2(600000, 1000);      // 10 Min
+                countDownTimer_CH_2 = new countdown_CH_2(660000, 1000);      // 11 Min
                 countDownTimer_CH_2.start();
 
             } else if (channel_2_Status == "Before Capturing") {
@@ -306,7 +306,7 @@ public class MainActivity extends Activity {
 
                 // Before Capture is: 10mins
                 channel_3_Status = "Before Capturing";
-                countDownTimer_CH_3 = new countdown_CH_3(600000, 1000);      // 10 Min
+                countDownTimer_CH_3 = new countdown_CH_3(660000, 1000);      // 11 Min
                 countDownTimer_CH_3.start();
 
             } else if (channel_3_Status == "Before Capturing") {
