@@ -149,11 +149,39 @@
 
     </LinearLayout>
 
-    <Button
+<!--    <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start Count Down Timer"
+        android:layout_below="@+id/ll_CH_4" />-->
+
+    <Button
+        android:id="@+id/bt_CH_1_KontaDied"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH 1: Konta Died"
         android:layout_below="@+id/ll_CH_4" />
+
+    <Button
+        android:id="@+id/bt_CH_2_KontaDied"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH 2: Konta Died"
+        android:layout_below="@+id/bt_CH_1_KontaDied" />
+
+    <Button
+        android:id="@+id/bt_CH_3_KontaDied"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH 3: Konta Died"
+        android:layout_below="@+id/bt_CH_2_KontaDied" />
+
+    <Button
+        android:id="@+id/bt_CH_4_KontaDied"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH 4: Konta Died"
+        android:layout_below="@+id/bt_CH_3_KontaDied" />
 
 </RelativeLayout>
