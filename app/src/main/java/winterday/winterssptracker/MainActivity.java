@@ -137,11 +137,16 @@ public class MainActivity extends Activity {
             int totalMinutes = progress / 60;
             int minutes = totalMinutes % 60;
 
+            String fakeZero = "";
+
+            if (seconds < 10){
+                fakeZero = "0";
+            } else {
+                fakeZero = "";
+            }
+
             tvCH1Status.setText(channel_1_Status);
-
-            // TODO: If digit less then 10 need add 0
-            tvCH1Timer.setText(Integer.toString(minutes) + " : " + Integer.toString(seconds));
-
+            tvCH1Timer.setText(Integer.toString(minutes) + " : " +  fakeZero + Integer.toString(seconds));
         }
 
         @Override
@@ -207,11 +212,16 @@ public class MainActivity extends Activity {
             int totalMinutes = progress / 60;
             int minutes = totalMinutes % 60;
 
-            tvCH2Status.setText(channel_1_Status);
+            String fakeZero = "";
 
-            // TODO: If digit less then 10 need add 0
-            tvCH2Timer.setText(Integer.toString(minutes) + " : " + Integer.toString(seconds));
+            if (seconds < 10){
+                fakeZero = "0";
+            } else {
+                fakeZero = "";
+            }
 
+            tvCH2Status.setText(channel_2_Status);
+            tvCH2Timer.setText(Integer.toString(minutes) + " : " +  fakeZero + Integer.toString(seconds));
         }
 
         @Override
@@ -277,11 +287,16 @@ public class MainActivity extends Activity {
             int totalMinutes = progress / 60;
             int minutes = totalMinutes % 60;
 
-            tvCH3Status.setText(channel_1_Status);
+            String fakeZero = "";
 
-            // TODO: If digit less then 10 need add 0
-            tvCH3Timer.setText(Integer.toString(minutes) + " : " + Integer.toString(seconds));
+            if (seconds < 10){
+                fakeZero = "0";
+            } else {
+                fakeZero = "";
+            }
 
+            tvCH3Status.setText(channel_3_Status);
+            tvCH3Timer.setText(Integer.toString(minutes) + " : " +  fakeZero + Integer.toString(seconds));
         }
 
         @Override
