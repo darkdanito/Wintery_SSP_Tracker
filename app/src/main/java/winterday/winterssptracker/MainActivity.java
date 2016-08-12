@@ -37,6 +37,8 @@ public class MainActivity extends Activity {
     String channel_2_Status = "Start";
     String channel_3_Status = "Start";
 
+    // ToDo: Switch the phrases timing to constant .....
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +82,7 @@ public class MainActivity extends Activity {
                     countDownTimer_CH_1.cancel();
                 }
 
-                countDownTimer_CH_1 = new countdown_CH_1(65000, 1000);      // 1 Min
+                countDownTimer_CH_1 = new countdown_CH_1(60000, 1000);      // 1 Min
                 countDownTimer_CH_1.start();
 
             }
@@ -97,7 +99,7 @@ public class MainActivity extends Activity {
                     countDownTimer_CH_2.cancel();
                 }
 
-                countDownTimer_CH_2 = new countdown_CH_2(65000, 1000);      // 1 Min
+                countDownTimer_CH_2 = new countdown_CH_2(60000, 1000);      // 1 Min
                 countDownTimer_CH_2.start();
 
             }
@@ -114,7 +116,7 @@ public class MainActivity extends Activity {
                     countDownTimer_CH_3.cancel();
                 }
 
-                countDownTimer_CH_3 = new countdown_CH_3(65000, 1000);      // 1 Min
+                countDownTimer_CH_3 = new countdown_CH_3(60000, 1000);      // 1 Min
                 countDownTimer_CH_3.start();
 
             }
@@ -177,7 +179,7 @@ public class MainActivity extends Activity {
 
                 // Mining is: 32min
                 channel_1_Status = "Mining Phase";
-                countDownTimer_CH_1 = new countdown_CH_1(1920000, 1000);      // 32 Min
+                countDownTimer_CH_1 = new countdown_CH_1(1980000, 1000);      // 33 Min
                 countDownTimer_CH_1.start();
 
             } else if (channel_1_Status == "Mining Phase") {
@@ -252,7 +254,7 @@ public class MainActivity extends Activity {
 
                 // Mining is: 32min
                 channel_2_Status = "Mining Phase";
-                countDownTimer_CH_2 = new countdown_CH_2(1920000, 1000);      // 32 Min
+                countDownTimer_CH_2 = new countdown_CH_2(1980000, 1000);      // 33 Min
                 countDownTimer_CH_2.start();
 
             } else if (channel_2_Status == "Mining Phase") {
@@ -327,7 +329,7 @@ public class MainActivity extends Activity {
 
                 // Mining is: 32min
                 channel_3_Status = "Mining Phase";
-                countDownTimer_CH_3 = new countdown_CH_3(1920000, 1000);      // 32 Min
+                countDownTimer_CH_3 = new countdown_CH_3(1980000, 1000);      // 33 Min
                 countDownTimer_CH_3.start();
 
             } else if (channel_1_Status == "Mining Phase") {
