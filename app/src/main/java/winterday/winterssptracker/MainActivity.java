@@ -384,7 +384,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
                 countDownTimer_CH_3 = new countdown_CH_3(1980000, 1000);      // 33 Min
                 countDownTimer_CH_3.start();
 
-            } else if (channel_1_Status == "Mining Phase") {
+            } else if (channel_3_Status == "Mining Phase") {
 
                 // Battle Phrase 17mins
                 channel_3_Status = "Battle Phase";
