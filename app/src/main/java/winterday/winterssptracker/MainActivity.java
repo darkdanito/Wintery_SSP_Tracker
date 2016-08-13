@@ -223,7 +223,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             } else if (channel_1_Status == "Capturing") {
 
                 // Before Mining is: 1min
-                countdown1Min = new countdown_CH_1(60000, 1000);       // 1 Min
+                countDownTimer_CH_1 = new countdown_CH_1(60000, 1000);       // 1 Min
                 channel_1_Status = "Before Mining";
                 countDownTimer_CH_1.start();
 
@@ -298,7 +298,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             } else if (channel_2_Status == "Capturing") {
 
                 // Before Mining is: 1min
-                countdown1Min = new countdown_CH_2(60000, 1000);       // 1 Min
+                countDownTimer_CH_2 = new countdown_CH_2(60000, 1000);       // 1 Min
                 channel_2_Status = "Before Mining";
                 countDownTimer_CH_2.start();
 
@@ -373,7 +373,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             } else if (channel_3_Status == "Capturing") {
 
                 // Before Mining is: 1min
-                countdown1Min = new countdown_CH_3(60000, 1000);       // 1 Min
+                countDownTimer_CH_3 = new countdown_CH_3(60000, 1000);       // 1 Min
                 channel_3_Status = "Before Mining";
                 countDownTimer_CH_3.start();
 
