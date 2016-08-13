@@ -23,9 +23,11 @@
             android:layout_weight="1"/>
 
         <EditText
+            android:id="@+id/ed_CH_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:maxLength="4"
             android:hint="Time"/>
 
         <Spinner
@@ -34,10 +36,10 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/bt_CH_1_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Update"/>
-
 
     </LinearLayout>
 
