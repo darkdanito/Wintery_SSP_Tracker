@@ -5,7 +5,9 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -58,6 +60,12 @@ public class MainActivity extends Activity {
 
         tvCH3Status = (TextView)findViewById(R.id.tw_CH_3_Status);
         tvCH3Timer = (TextView)findViewById(R.id.tw_CH_3_Time);
+
+        Spinner spin_CH_1 = (Spinner) findViewById(R.id.spinner_CH_1);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_SSP_Phrase, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin_CH_1.setAdapter(adapter);
+
 
         button_CH_1_KontaDied.setOnClickListener(new View.OnClickListener() {
 

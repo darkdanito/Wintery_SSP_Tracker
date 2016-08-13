@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WinterSSPTracker</string>
+
+    <string-array name="array_SSP_Phrase">
+        <item>Battle Phase</item>
+        <item>Before Capturing</item>
+        <item>Capturing</item>
+        <item>Before Mining</item>
+        <item>Mining Phase</item>
+    </string-array>
 </resources>
