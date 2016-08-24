@@ -1,6 +1,7 @@
 package winterday.winterssptracker;
 
 import android.app.Activity;
+import android.graphics.Region;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     Button button_CH_3_KontaDied;
 
     Button button_CH_1_Update;
+    Button button_CH_2_Update;
+    Button button_CH_3_Update;
+    Button button_CH_4_Update;
 
 
     Button button;
@@ -29,6 +33,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
 
     String spinnerCH1_selected;
+    String spinnerCH2_selected;
+    String spinnerCH3_selected;
 
 
 
@@ -37,7 +43,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     TextView tvCH3Status, tvCH3Timer;
 
     EditText edCH1Update;
-
+    EditText edCH2Update;
+    EditText edCH3Update;
+    EditText edCH4Update;
 
     CountDownTimer countdown1Min;
     CountDownTimer countDownTimer_CH_1;
@@ -62,8 +70,14 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         button_CH_3_KontaDied = (Button)findViewById(R.id.bt_CH_3_KontaDied);
 
         button_CH_1_Update = (Button)findViewById(R.id.bt_CH_1_update);
+        button_CH_2_Update = (Button)findViewById(R.id.bt_CH_2_update);
+        button_CH_3_Update = (Button)findViewById(R.id.bt_CH_3_update);
+        button_CH_4_Update = (Button)findViewById(R.id.bt_CH_4_update);
 
         edCH1Update = (EditText)findViewById(R.id.ed_CH_1);
+        edCH2Update = (EditText)findViewById(R.id.ed_CH_2);
+        edCH3Update = (EditText)findViewById(R.id.ed_CH_3);
+        edCH4Update = (EditText)findViewById(R.id.ed_CH_4);
 
         tvCH1Status = (TextView)findViewById(R.id.tw_CH_1_Status);
         tvCH1Timer = (TextView)findViewById(R.id.tw_CH_1_Time);
@@ -176,12 +190,98 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
                 countDownTimer_CH_1.start();
             }
         });
+
+        button_CH_2_Update.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String getMins = "";
+
+                String userInputCH2Timing = edCH2Update.getText().toString();
+
+                String getSeconds = userInputCH2Timing.substring(Math.max(userInputCH2Timing.length() - 2, 0));
+
+                //Todo: Error if second is empty
+                if (userInputCH2Timing.length() == 4){
+
+                    getMins = userInputCH2Timing.substring(0,2);
+
+                } else if (userInputCH2Timing.length() == 3) {
+
+                    getMins = userInputCH2Timing.substring(0,1);
+
+                }
+
+                int timeInSeconds = ( Integer.parseInt(getMins) * 60 ) + Integer.parseInt(getSeconds);
+                int timeinMS = timeInSeconds * 1000;
+
+                channel_2_Status = spinnerCH2_selected;
+
+                if (countDownTimer_CH_2 != null){
+                    countDownTimer_CH_2.cancel();
+                }
+
+                countDownTimer_CH_2 = new countdown_CH_2(timeinMS, 1000);      // 1 Min
+                countDownTimer_CH_2.start();
+            }
+        });
+
+        button_CH_3_Update.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String getMins = "";
+
+                String userInputCH3Timing = edCH3Update.getText().toString();
+
+                String getSeconds = userInputCH3Timing.substring(Math.max(userInputCH3Timing.length() - 2, 0));
+
+                //Todo: Error if second is empty
+                if (userInputCH3Timing.length() == 4){
+
+                    getMins = userInputCH3Timing.substring(0,2);
+
+                } else if (userInputCH3Timing.length() == 3) {
+
+                    getMins = userInputCH3Timing.substring(0,1);
+
+                }
+
+                int timeInSeconds = ( Integer.parseInt(getMins) * 60 ) + Integer.parseInt(getSeconds);
+                int timeinMS = timeInSeconds * 1000;
+
+                channel_3_Status = spinnerCH3_selected;
+
+                if (countDownTimer_CH_3 != null){
+                    countDownTimer_CH_3.cancel();
+                }
+
+                countDownTimer_CH_3 = new countdown_CH_3(timeinMS, 1000);      // 1 Min
+                countDownTimer_CH_3.start();
+            }
+        });
     }
+
+
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
-        spinnerCH1_selected = parent.getItemAtPosition(pos).toString();
+    //    spinnerCH1_selected = parent.getItemAtPosition(pos).toString();
+
+        switch(parent.getId()) {
+            case R.id.spinner_CH_1:
+                spinnerCH1_selected = parent.getItemAtPosition(pos).toString();
+                break;
+            case R.id.spinner_CH_2:
+                spinnerCH2_selected = parent.getItemAtPosition(pos).toString();
+                break;
+            case R.id.spinner_CH_3:
+                spinnerCH3_selected = parent.getItemAtPosition(pos).toString();
+                break;
+        }
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
