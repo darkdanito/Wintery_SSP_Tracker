@@ -135,12 +135,11 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
                 String getMins = "";
 
-                Log.d("Necro","Necro: " + edCH1Update.getText().toString() + " : " + spinnerCH1_selected);
-
                 String userInputCH1Timing = edCH1Update.getText().toString();
 
                 String getSeconds = userInputCH1Timing.substring(Math.max(userInputCH1Timing.length() - 2, 0));
 
+                //Todo: Error if second is empty
                 if (userInputCH1Timing.length() == 4){
 
                     getMins = userInputCH1Timing.substring(0,2);
@@ -151,20 +150,22 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
                 }
 
+                int timeInSeconds = ( Integer.parseInt(getMins) * 60 ) + Integer.parseInt(getSeconds);
+                int timeinMS = timeInSeconds * 1000;
+
                 channel_1_Status = spinnerCH1_selected;
 
                 if (countDownTimer_CH_1 != null){
                     countDownTimer_CH_1.cancel();
                 }
 
-                countDownTimer_CH_1 = new countdown_CH_1(60000, 1000);      // 1 Min
+                countDownTimer_CH_1 = new countdown_CH_1(timeinMS, 1000);      // 1 Min
                 countDownTimer_CH_1.start();
             }
         });
     }
 
-    public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
         spinnerCH1_selected = parent.getItemAtPosition(pos).toString();
@@ -191,7 +192,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             int totalMinutes = progress / 60;
             int minutes = totalMinutes % 60;
 
-            String fakeZero = "";
+            String fakeZero;
 
             if (seconds < 10){
                 fakeZero = "0";
@@ -266,7 +267,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             int totalMinutes = progress / 60;
             int minutes = totalMinutes % 60;
 
-            String fakeZero = "";
+            String fakeZero;
 
             if (seconds < 10){
                 fakeZero = "0";
@@ -314,7 +315,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
                 // Battle Phrase 17mins
                 channel_2_Status = "Battle Phase";
 
-                countDownTimer_CH_2 = new countdown_CH_2(1020000, 1000);      // 1 Min
+                countDownTimer_CH_2 = new countdown_CH_2(1020000, 1000);      // 17 Min
                 countDownTimer_CH_2.start();
 
             } else {
@@ -341,7 +342,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             int totalMinutes = progress / 60;
             int minutes = totalMinutes % 60;
 
-            String fakeZero = "";
+            String fakeZero;
 
             if (seconds < 10){
                 fakeZero = "0";
@@ -389,7 +390,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
                 // Battle Phrase 17mins
                 channel_3_Status = "Battle Phase";
 
-                countDownTimer_CH_3 = new countdown_CH_3(1020000, 1000);      // 1 Min
+                countDownTimer_CH_3 = new countdown_CH_3(1020000, 1000);      // 17 Min
                 countDownTimer_CH_3.start();
 
             } else {
