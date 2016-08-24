@@ -75,10 +75,23 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         tvCH3Timer = (TextView)findViewById(R.id.tw_CH_3_Time);
 
         final Spinner spin_CH_1 = (Spinner) findViewById(R.id.spinner_CH_1);
+        final Spinner spin_CH_2 = (Spinner) findViewById(R.id.spinner_CH_2);
+        final Spinner spin_CH_3 = (Spinner) findViewById(R.id.spinner_CH_3);
+        final Spinner spin_CH_4 = (Spinner) findViewById(R.id.spinner_CH_4);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_SSP_Phrase, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin_CH_1.setAdapter(adapter);
         spin_CH_1.setOnItemSelectedListener(this);
+
+        spin_CH_2.setAdapter(adapter);
+        spin_CH_2.setOnItemSelectedListener(this);
+
+        spin_CH_3.setAdapter(adapter);
+        spin_CH_3.setOnItemSelectedListener(this);
+
+        spin_CH_4.setAdapter(adapter);
+        spin_CH_4.setOnItemSelectedListener(this);
 
         button_CH_1_KontaDied.setOnClickListener(new View.OnClickListener() {
 

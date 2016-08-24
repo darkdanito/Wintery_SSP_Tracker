@@ -55,6 +55,26 @@
             android:layout_height="wrap_content"
             android:text="CH 2 : "
             android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/ed_CH_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="4"
+            android:hint="Time"/>
+
+        <Spinner
+            android:id="@+id/spinner_CH_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_CH_2_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -69,6 +89,25 @@
             android:layout_height="wrap_content"
             android:text="CH 3 : "
             android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/ed_CH_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="4"
+            android:hint="Time"/>
+
+        <Spinner
+            android:id="@+id/spinner_CH_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_CH_3_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"/>
     </LinearLayout>
 
     <LinearLayout
@@ -83,6 +122,25 @@
             android:layout_height="wrap_content"
             android:text="CH 4 : "
             android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/ed_CH_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="4"
+            android:hint="Time"/>
+
+        <Spinner
+            android:id="@+id/spinner_CH_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_CH_4_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"/>
 
     </LinearLayout>
 
